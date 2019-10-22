@@ -4,9 +4,19 @@
  *--------------------------------------------------------------------------------------------*/
 package org.eclipse.che.examples;
 
-public class Deck {
-    public static void main(String... argvs) {
-        String a = "Che";
-        System.out.println("Hello World " + a + "!");
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.ArrayList;
+import org.eclipse.che.examples.Term;
+
+public class Deck<Term> extends ArrayList<Term> {
+    public Deck() {
+        Term t;
     }
+//    public Deck(String json) {1
+//        Type collectionType = new TypeToken<Collection<Term>>(){}.getType();
+//        
+//        Gson g = new Gson();
+//        Collection<Term> terms = g.fromJson(json, collectionType);
+//        Term t = (Term) terms.toArray()[0]   
 }

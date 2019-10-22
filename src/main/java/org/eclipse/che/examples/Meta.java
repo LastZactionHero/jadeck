@@ -1,23 +1,14 @@
 package org.eclipse.che.examples;
 
-
-public class Term {
-    public String uuid;
-    public String scheduled_for;
-    public int scheduling_interval;
-    public String term_a;
-    public String term_b;
-    public Meta meta;
+public class Meta {
+    public String sentence_expression;
+    public String sentence_furigana;
+    public String sentence_kana;
+    public String sentence_meaning;
+    public String vocab_expression;
+    public String vocab_furigana;
 }
-
-//
-//{
-//  "uuid": "f643015f-2e99-4636-853a-24e971bf9a85",
-//  "scheduled_for": "2019-10-18T16:54:00Z",
-//  "scheduling_interval": 3,
-//  "term_a": "she, one's girlfriend",
-//  "term_b": "彼女",
-//  "meta": {
+//"meta": {
 //    "core_index": "46",
 //    "jlpt": "JLPT3",
 //    "new_opt_voc_index": "317",
@@ -34,4 +25,3 @@ public class Term {
 //    "vocab_ko_index": "440",
 //    "vocab_pos": "Pronoun"
 //  }
-//}

@@ -32,11 +32,7 @@ import static org.junit.Assert.*;
 public class DeckTest {
     
     @Test
-    public void testApp() {        
-        Type collectionType = new TypeToken<Collection<Term>>(){}.getType();
-        
-        Gson g = new Gson();
-
+    public void testItShouldSerializeDeckToTerms() {        
         InputStream is = getClass().getClassLoader().getResourceAsStream("deck.json");
         String json = null;
         try {
@@ -46,8 +42,14 @@ public class DeckTest {
             e.printStackTrace();
         }
 
-        Collection<Term> terms = g.fromJson(json, collectionType);
-        Term t = (Term) terms.toArray()[0];
+        Gson g = new Gson();
+        Type collectionType = new TypeToken<Deck<Term>>(){}.getType();
+
+        Deck d = g.fromJson(json, collectionType);
+        assertEquals(d.size(), 20);
+        
+        Term t = (Term) d.get(0);
         assertEquals(t.uuid, "f643015f-2e99-4636-853a-24e971bf9a85");
+        assertEquals(t.meta.sentence_meaning, "She's an office worker.");
     }
 }

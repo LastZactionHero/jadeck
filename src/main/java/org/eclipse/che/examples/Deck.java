@@ -4,19 +4,30 @@
  *--------------------------------------------------------------------------------------------*/
 package org.eclipse.che.examples;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.ArrayList;
 import org.eclipse.che.examples.Term;
 
 public class Deck<Term> extends ArrayList<Term> {
+    public static final long serialVersionUID = 1;
+    private int idx = 0;
+
     public Deck() {
-        Term t;
     }
-//    public Deck(String json) {1
-//        Type collectionType = new TypeToken<Collection<Term>>(){}.getType();
-//        
-//        Gson g = new Gson();
-//        Collection<Term> terms = g.fromJson(json, collectionType);
-//        Term t = (Term) terms.toArray()[0]   
+    
+    public Term next() {
+        if(this.size() == 0) {
+            throw new ArrayIndexOutOfBoundsException("deck is empty");
+        }
+
+        Term t = (Term) this.get(idx);
+        this.idx = (this.idx + 1) % this.size();
+        return t;
+    }
+    
+    public void success() {
+        // Get the previous term idx, as it has been incremented by
+        // next
+        int sIdx = Math.max(this.idx - 1, 0);
+        this.remove(sIdx);
+    }
 }

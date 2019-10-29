@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full:latest
+FROM gitpod/workspace-full
 
 USER root
 # Install custom tools, runtime, etc.
@@ -11,9 +11,8 @@ USER gitpod
 # Apply user-specific settings
 WORKDIR /tmp
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-268.0.0-linux-x86_64.tar.gz
-RUN tar -xzf google-cloud-sdk-268.0.0-linux-x86_64.tar.gz
-WORKDIR /tmp/google-cloud-sdk-268.0.0-linux-x86_64
-RUN ./install.sh
+RUN tar -xvf google-cloud-sdk-268.0.0-linux-x86_64.tar.gz
+RUN /tmp/google-cloud-sdk/install.sh --quiet
 
 # Give back control
 USER root

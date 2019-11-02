@@ -2,6 +2,8 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+RUN echo here
+
 # Apply user-specific settings
 WORKDIR /home/gitpod
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-268.0.0-linux-x86_64.tar.gz

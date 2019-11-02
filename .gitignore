@@ -1,0 +1,11 @@
+ja/target/
+ja/pom.xml.tag
+ja/pom.xml.releaseBackup
+ja/pom.xml.versionsBackup
+ja/pom.xml.next
+ja/release.properties
+ja/dependency-reduced-pom.xml
+ja/buildNumber.properties
+ja/.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+ja/.mvn/wrapper/maven-wrapper.jar

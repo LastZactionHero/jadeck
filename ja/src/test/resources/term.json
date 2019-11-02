@@ -1,0 +1,24 @@
+{
+  "uuid": "f643015f-2e99-4636-853a-24e971bf9a85",
+  "scheduled_for": "2019-10-18T16:54:00Z",
+  "scheduling_interval": 3,
+  "term_a": "she, one's girlfriend",
+  "term_b": "彼女",
+  "meta": {
+    "core_index": "46",
+    "jlpt": "JLPT3",
+    "new_opt_voc_index": "317",
+    "opt_sen_index": "214",
+    "opt_voc_index": "315",
+    "sent_ko_index": "441",
+    "sentence_cloze": "<b>（　）</b>は OL[おーえる]です。\r",
+    "sentence_expression": "<b>彼女</b>はOLです。",
+    "sentence_furigana": "<b> 彼女[かのじょ]</b>は OL[おーえる]です。",
+    "sentence_kana": "<b>かのじょ</b> は おーえる です",
+    "sentence_meaning": "She's an office worker.",
+    "vocab_expression": "かのじょ",
+    "vocab_furigana": "彼女[かのじょ]",
+    "vocab_ko_index": "440",
+    "vocab_pos": "Pronoun"
+  }
+}
